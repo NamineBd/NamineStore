@@ -1,3 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Tektur:wght@400..900&display=swap');
+
+.tektur-nom {
+  font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
 .header {
   background: linear-gradient(135deg, #6d28d9, #4c1d95); /* Dégradé violet */
   color: white;

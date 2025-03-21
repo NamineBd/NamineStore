@@ -17,7 +17,7 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="header-container">
-        <h1 className="header-title">Namine Store</h1>
+        <h1 className="header-title"><p className="tektur-nom">Namine Store</p></h1>
         <div className="search-container">
           <input
             type="text"
