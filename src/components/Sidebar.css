@@ -1,0 +1,114 @@
+/* Sidebar principale */
+.sidebar {
+  width: 250px; /* Largeur de la sidebar */
+  background-color: #f9fafb; /* Gris clair */
+  padding: 1rem;
+  border-right: 1px solid #e5e7eb; /* Bordure grise */
+  height: calc(100vh - 120px); /* Hauteur totale moins la hauteur du header et du footer */
+  overflow-y: auto; /* Permet de faire défiler si le contenu est trop long */
+  position: sticky; /* La sidebar défile avec le contenu */
+  top: 60px; /* Position en dessous du header */
+  z-index: 1000; /* Assure que la sidebar est au-dessus du contenu */
+  margin-left: -240px;
+}
+
+/* Bouton hamburger */
+.hamburger-button {
+  display: none; /* Caché par défaut */
+  position: fixed;
+  /*top: 10px;
+  left: 10px;*/
+  background-color: #6d28d9; /* Violet */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001; /* Au-dessus de la sidebar */
+  border-radius: 30%;
+}
+
+.hamburger-button:hover {
+  background: linear-gradient(135deg, #6d28d9, #4c1d95); /* Dégradé violet */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Overlay pour fermer la sidebar */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  z-index: 999; /* En dessous de la sidebar */
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+  .hamburger-button {
+    display: block; /* Affiche le bouton hamburger */
+  }
+
+  .sidebar {
+    position: fixed; /* Fixe la sidebar sur les petits écrans */
+    left: -250px; /* Cachée par défaut */
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    top: 0; /* Commence en haut de l'écran */
+  
+  }
+
+  .sidebar.open {
+    left: 0; /* Affiche la sidebar */
+    margin-left: 0px;
+  }
+
+  .sidebar-overlay {
+    display: block;
+  }
+}
+
+/* Styles du contenu de la sidebar */
+.sidebar h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #1e293b; /* Gris foncé */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+  background-color: #6d28d9; /* Violet */
+  color: white;
+}
+
+.reset-filters-button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #6d28d9; /* Violet */
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.reset-filters-button:hover {
+  background-color: #5b21b6; /* Violet foncé */
+}

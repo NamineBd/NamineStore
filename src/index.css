@@ -1,0 +1,25 @@
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f9fafb; /* Gris clair */
+  color: #1e293b; /* Gris foncé */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Styles pour les conteneurs */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}

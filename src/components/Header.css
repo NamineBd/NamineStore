@@ -1,0 +1,150 @@
+.header {
+  background: linear-gradient(135deg, #6d28d9, #4c1d95); /* Dégradé violet */
+  color: white;
+  padding: 1.5rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  justify-content: space-between;
+  padding: 0 1rem;
+  display: flex;
+  height: 70px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Occuper toute la largeur */
+  max-width: 1200px;
+  margin: 0 auto; /* Centrer le contenu */
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.98);
+  border-radius: 0.9rem;
+  padding: 0.8rem;
+  width: 50%;
+  max-height: 50px;
+  gap: 0.5rem;
+}
+
+.header-search {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border: 1px solid  #6d28d9;
+  background: transparent;
+  color: black;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+}
+
+.search-icon {
+  color: #6d28d9; /* Violet */
+  font-size: 1.2rem;
+}
+
+.user-icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.user-icon {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.user-icon:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cart-icon {
+  position: relative;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+}
+
+.cart-icon:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: orangered;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+}
+
+/* Bouton hamburger */
+.hamburger-button {
+  display: none; /* Caché par défaut */
+  position: fixed;
+  bottom: 10px; /* Position en bas à gauche */
+  left: 10px;
+  background-color: #6d28d9; /* Violet */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001; /* Au-dessus de la sidebar */
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+  .hamburger-button {
+    display: block; /* Affiche le bouton hamburger */
+  }
+
+  .header {
+    padding: 0 0.5rem; /* Réduire le padding */
+  }
+
+  .header-title {
+    font-size: 1.2rem; /* Réduire la taille du titre */
+  }
+
+  .header-search {
+    width: 150px; /* Réduire la largeur de la barre de recherche */
+  }
+
+  .search-container {
+    width: 100%; /* Occuper toute la largeur */
+  }
+}
